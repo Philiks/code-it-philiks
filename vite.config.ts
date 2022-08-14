@@ -3,6 +3,7 @@ import replace from '@rollup/plugin-replace';
 
 export default defineConfig({
   build: {
+    chunkSizeWarningLimit: 1500,
     rollupOptions: {
       plugins: [
         //  Toggle the booleans here to enable / disable Phaser 3 features:
@@ -12,7 +13,8 @@ export default defineConfig({
           'typeof EXPERIMENTAL': "'true'",
           'typeof PLUGIN_CAMERA3D': "'false'",
           'typeof PLUGIN_FBINSTANT': "'false'",
-          'typeof FEATURE_SOUND': "'true'"
+          'typeof FEATURE_SOUND': "'true'",
+          'preventAssignment': true
         })
       ]
     }
