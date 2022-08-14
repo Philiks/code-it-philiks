@@ -7,7 +7,7 @@ export default class Demo extends Phaser.Scene {
 
   preload() {
     this.load.image('logo', 'assets/cip-logo.png');
-    this.load.image('fire', 'http://labs.phaser.io/assets/particles/fire1.png');
+    this.load.image('fire', 'assets/fire1.png');
   }
 
   create() {
