@@ -1,9 +1,10 @@
-import Phaser from 'phaser';
-import config from './config';
-import GameScene from './scenes/Game';
+import Phaser from "phaser";
 
-new Phaser.Game(
+import config from "./config";
+import GameScene from "./scenes/LevelScene";
+
+const game = new Phaser.Game(
   Object.assign(config, {
-    scene: [GameScene]
+    scene: [GameScene],
   })
 );
