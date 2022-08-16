@@ -4,9 +4,11 @@
   "description": "Phaser 3 TypeScript Starter",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
+    "dev:host": "vite --host",
     "build": "vite build",
-    "serve": "vite preview --host"
+    "serve": "vite preview",
+    "serve:host": "vite preview --host"
   },
   "repository": {
     "type": "git",
