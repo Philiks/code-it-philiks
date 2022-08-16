@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
 
-export default class Demo extends Phaser.Scene {
+export default class LevelScene extends Phaser.Scene {
   constructor() {
-    super('GameScene');
+    super('LevelScene');
   }
 
   preload() {
