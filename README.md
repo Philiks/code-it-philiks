@@ -25,3 +25,6 @@ server by running `npm run dev` and navigate to http://localhost:3000.
 ## Production
 
 After running `npm run build`, the files you need for production will be on the `dist` folder. To test code on your `dist` folder, run `npm run serve` and navigate to http://localhost:4173
+
+## Credit
+Special thanks to [Karwisch](https://karwisch.itch.io/) for such wonderful [assets](https://karwisch.itch.io/pxui-basic).
