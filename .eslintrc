@@ -10,5 +10,15 @@
   ],
   "parserOptions": {
     "project": "tsconfig.json"
+  },
+  "rules": {
+    // TODOs are fine but make sure that you're coding in
+    // `development` branch :)
+    "no-warning-comments": "warn",
+    // We can turn this off since the project is in pure TS.
+    // Any type hints that causes circular dependencies will
+    // be resolved after build.
+    // Run `npm run madge:circular` if doubtful.
+    "import/no-cycle": "off"
   }
 }
