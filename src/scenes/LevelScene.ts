@@ -141,7 +141,7 @@ export default abstract class LevelScene extends Phaser.Scene {
         font: "bold 40px Arial",
         color: "white",
         backgroundColor: "black",
-        resolution: 3
+        resolution: 3,
       })
       .setPadding(10, 5)
       .setOrigin(0.5);
