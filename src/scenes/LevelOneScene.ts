@@ -56,7 +56,7 @@ export default class LevelOneScene extends LevelScene {
     this.endBlock.create("x = 10;");
   }
 
-  protected initVariables(): void {
+  protected initVariableActionCallbacks(): void {
     // Start Block.
     this.startBlock.variableActionCallback = () => {
       this.variables = {
@@ -93,16 +93,5 @@ export default class LevelOneScene extends LevelScene {
         })
         .setOrigin(0.5);
     };
-  }
-
-  protected registerSrcBlkToDestBlk(): void {
-    this.sourceBlocks.forEach(
-      (rowSourceBlocks: SourceBlock[], destinationIndex: number) =>
-        rowSourceBlocks.forEach(
-          (sourceBlock: SourceBlock) =>
-            (sourceBlock.destinationBlock =
-              this.destinationBlocks[destinationIndex])
-        )
-    );
   }
 }

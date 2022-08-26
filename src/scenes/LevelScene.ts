@@ -91,7 +91,7 @@ export default abstract class LevelScene extends Phaser.Scene {
 
   public create(): void {
     this.initBlocks();
-    this.initVariables();
+    this.initVariableActionCallbacks();
     this.initInstructionBlockList();
     this.registerSrcBlkToDestBlk();
     this.handleEvents();
@@ -145,6 +145,17 @@ export default abstract class LevelScene extends Phaser.Scene {
     // the player's chosend SourceBlock.
     const lastIndex = this.instructionBlockList.length - 1;
     this.instructionBlockList[lastIndex] = this.endBlock;
+  }
+
+  protected registerSrcBlkToDestBlk(): void {
+    this.sourceBlocks.forEach(
+      (rowSourceBlocks: SourceBlock[], destinationIndex: number) =>
+        rowSourceBlocks.forEach(
+          (sourceBlock: SourceBlock) =>
+            (sourceBlock.destinationBlock =
+              this.destinationBlocks[destinationIndex])
+        )
+    );
   }
 
   protected handleEvents(): void {
@@ -250,8 +261,7 @@ export default abstract class LevelScene extends Phaser.Scene {
   // ========== End of Level Scene Method (Event Callbacks) ==========
 
   // ========== Abstract Methods ==========
-  protected abstract initVariables(): void;
+  protected abstract initVariableActionCallbacks(): void;
   protected abstract initBlocks(): void;
-  protected abstract registerSrcBlkToDestBlk(): void;
   // ========== End of Abstract Methods ==========
 }
