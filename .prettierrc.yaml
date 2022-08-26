@@ -1,0 +1,8 @@
+# All of these are default values.
+# Just adding it here for more clarity to
+# the coding standard that this project uses.
+trailingComma: "es5"
+tabWidth: 2
+semi: true
+singleQuote: false
+printWidth: 80

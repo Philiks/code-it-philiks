@@ -2,7 +2,7 @@
   <br>
   <a href="https://github.com/geocine/phaser3-rollup-typescript#readme"><img src="https://i.imgur.com/6lcIxDs.png" alt="header" width="600"/></a>
   <br>
-  Phaser 3 TypeScript Starter
+  Simulation: Code it Philiks
   <br>
 </h1>
 
@@ -25,3 +25,6 @@ server by running `npm run dev` and navigate to http://localhost:3000.
 ## Production
 
 After running `npm run build`, the files you need for production will be on the `dist` folder. To test code on your `dist` folder, run `npm run serve` and navigate to http://localhost:4173
+
+## Credit
+Special thanks to [Karwisch](https://karwisch.itch.io/) for such wonderful [assets](https://karwisch.itch.io/pxui-basic).
