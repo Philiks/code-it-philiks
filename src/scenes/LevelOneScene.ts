@@ -85,13 +85,7 @@ export default class LevelOneScene extends LevelScene {
     // End Block.
     this.endBlock.variableActionCallback = () => {
       const text = this.variables.varX === 10 ? "SUCCESS" : "FAILED";
-      this.add
-        .text(this.cameras.main.centerX, this.cameras.main.centerY, text, {
-          font: "bold 20px Arial",
-          color: "black",
-          resolution: 3,
-        })
-        .setOrigin(0.5);
+      this.showResult(text);
     };
   }
 }

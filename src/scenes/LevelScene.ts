@@ -102,7 +102,7 @@ export default abstract class LevelScene extends Phaser.Scene {
   }
   // ========== End of Phaser Methods ==========
 
-  // ========== Level Scene Method (Callable Method) ==========
+  // ========== Level Scene Method (Public Callable Method) ==========
   public executeActionCallbacks() {
     /**
      * Arrays.forEach() does not have a way to stop the iteration
@@ -132,7 +132,21 @@ export default abstract class LevelScene extends Phaser.Scene {
   public removeSourceBlockFromList(rowPosition: number): void {
     delete this.instructionBlockList[rowPosition];
   }
-  // ========== End of Level Scene Method (Callable Method) ==========
+  // ========== End of Level Scene Method (Public Callable Method) ==========
+
+  // ========== Level Scene Method (Derived Class Callable Method) ==========
+  protected showResult(text: string) {
+    this.add
+      .text(this.cameras.main.centerX, this.cameras.main.centerY, text, {
+        font: "bold 40px Arial",
+        color: "white",
+        backgroundColor: "black",
+        resolution: 3,
+      })
+      .setPadding(10, 5)
+      .setOrigin(0.5);
+  }
+  // ========== End of Level Scene Method (Derived Class Callable Method) ==========
 
   // ========== Level Scene Method ==========
   protected initInstructionBlockList(): void {
